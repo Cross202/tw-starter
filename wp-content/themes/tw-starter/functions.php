@@ -117,6 +117,9 @@ add_action( 'widgets_init', 'tw_starter_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tw_starter_scripts() {
+	//enqueue Google Fonts: Source Sans Pro and PT Serif
+	wp_enqueue_style('tw-starter-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif|Source+Sans+Pro:400,400i,700,900" rel="stylesheet');
+
 	wp_enqueue_style( 'tw-starter-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'tw-starter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
