@@ -74,10 +74,9 @@ if ( ! function_exists( 'tw_starter_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
+			'height'      => 90,
+			'width'       => 90,
+			'flex-width'  => true
 		) );
 	}
 endif;

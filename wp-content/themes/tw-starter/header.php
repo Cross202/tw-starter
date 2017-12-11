@@ -23,12 +23,17 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tw-starter' ); ?></a>
-
+	<figure class="header-image">;
+	<?php if( is_front_page()){
+		the_header_image_tag(); 
+	} ?>
+	</figure>
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) : ?>
+			<div class="site-branding_text">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
@@ -40,6 +45,7 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
+			</div><!-- .site-branding_text -->
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
