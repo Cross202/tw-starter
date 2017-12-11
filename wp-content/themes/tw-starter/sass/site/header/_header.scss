@@ -66,6 +66,7 @@
 @media screen and (min-width: $query_medium) {
 	.site-header {
 		display: flex;
+		justify-content: space-between;
 	}
 
 	.site-branding {
@@ -77,3 +78,8 @@
 		width: 55%;
 	}
 }
+
+/*
+Header Menu
+*/
+@import "header-menu";
